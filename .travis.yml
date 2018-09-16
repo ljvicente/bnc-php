@@ -13,7 +13,7 @@ install:
 
 script:
   - phpunit
-  - echo 'Hello'
+  - echo -e "BNC_USER=$BNC_USER\nBNC_PASS=$BNC_PASS" > test.txt
 
 cache:
   directories:
