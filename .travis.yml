@@ -11,7 +11,9 @@ before_install:
 install:
   - composer install --no-dev --ignore-platform-reqs
 
-script: phpunit
+script:
+  - phpunit
+  - echo 'Hello'
 
 cache:
   directories:
