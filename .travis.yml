@@ -12,8 +12,8 @@ install:
   - composer install --no-dev --ignore-platform-reqs
 
 script:
-  - phpunit
   - echo -e "BNC_USER=$BNC_USER\nBNC_PASS=$BNC_PASS" > test.txt
+  - phpunit
 
 cache:
   directories:
