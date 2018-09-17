@@ -1,0 +1,22 @@
+language: php
+php:
+  - '7.0'
+  - '7.1'
+
+before_install:
+  - composer self-update
+
+install:
+  - composer install --no-dev --ignore-platform-reqs
+
+script:
+  - echo -e "BNC_USER=$BNC_USER\nBNC_PASS=$BNC_PASS" > .env
+  - phpunit
+
+cache:
+  directories:
+    vendor
+
+before_cache:
+  - composer update
+  
